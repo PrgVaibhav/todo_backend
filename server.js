@@ -9,7 +9,7 @@ connectDB();
 // * Initializing Server
 const PORT = process.env.PORT;
 
-app.get("/", isAuthenticated, (req, res) => {
+app.get("/", (req, res) => {
   res.send("Home Page");
 });
 
