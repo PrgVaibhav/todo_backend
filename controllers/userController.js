@@ -11,7 +11,7 @@ export const userLogin = async (req, res, next) => {
     const ifUserExists = await User.findOne({ email }).select("+password");
 
     if (!ifUserExists)
-      return next(new ErrorHandler("Invalid Email or Password", 401));
+      return next(new ErrorHandler("User doesn't exists", 401));
 
     const isMatched = await bcrypt.compare(password, ifUserExists.password);
 

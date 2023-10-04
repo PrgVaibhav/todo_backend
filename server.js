@@ -1,6 +1,5 @@
 import { app } from "./app.js";
 import { connectDB } from "./database/database.js";
-import { isAuthenticated } from "./middlewares/auth.js";
 
 // * Initializing Database
 
